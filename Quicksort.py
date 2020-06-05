@@ -37,24 +37,8 @@ def quicksort(A, l, r):
     print(r-l+n1+n2)
     return r-l+n1+n2
 
-f = open('./inv.txt', 'r')
-Arr = []
-strng = f.read()
-f.close()
-strt, end = 0, 0
-i = 0
-while(i<len(strng)):
-    if(strng[i] == '\n'):
-        end = i
-        no = int(strng[strt:end])
-        print(no)
-        Arr = Arr + [no]
-        strt = i+1
-    i = i+1
 
-Arr1 = Arr[:10]
-
-print('Length:', len(Arr))
-comp = quicksort(Arr1, 0, len(Arr1)-1)
-print('No. of comparisons : ',comp)
-print(Arr1)
+Arr = [6,5,3,1,4,2,10,9,7,8]
+comp = quicksort(Arr)
+print(Arr)
+print("No. of comparisons done =", comp)
